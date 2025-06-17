@@ -23,7 +23,7 @@ label {
   text-align: left;
 }
 
-input[type="string"], input[type="password"], input {
+input {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -53,7 +53,7 @@ button:hover {
 }
 
 p {
-  color: red;
+  color:black;
   font-weight: bold;
   text-align: center;
 }

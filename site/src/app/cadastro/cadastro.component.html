@@ -1,1 +1,23 @@
-<p>cadastro works!</p>
+<form [formGroup]="forms">
+<label for="Nome">Nome completo:</label>
+<input id="Nome" type="text" formControlName="Nome"/>
+<br>
+<label for="Email">Email:</label>
+<input id="Email" type="text" formControlName="Email"/>
+<br/>
+<label for="Telefone">Telefone:</label>
+<input id="Telefone" type="text" formControlName="Telefone"/>
+<br>
+<label for="Endereço">Endereço:</label>
+<input id="Endereço" type="string" formControlName="Endereco"/>
+<br/>
+<label for="Usuario">Usuario:</label>
+<input id="Usuario" type="string"formControlName="Usuario"/>
+<br>
+<label for="Senha">Senha:</label>
+<input id="Senha" type="password"formControlName="Senha"/>
+<br/>
+<label for="Biografia">Biografia:</label>
+<input id="Biografia" type="string"formControlName="Biografia"/>
+<button type="button" routerLink="/home"> Criar perfil</button>
+</form>

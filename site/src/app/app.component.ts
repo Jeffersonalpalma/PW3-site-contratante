@@ -10,11 +10,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, LoginComponent,SobreComponent, CadastroComponent, HomepageComponent],
+  imports: [RouterOutlet, LoginComponent, SobreComponent, CadastroComponent, HomepageComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'site';
-  
+
 }

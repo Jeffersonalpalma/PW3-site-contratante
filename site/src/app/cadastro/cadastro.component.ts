@@ -9,8 +9,6 @@ import { RouterModule } from '@angular/router';
   styleUrl: './cadastro.component.css'
 })
 export class CadastroComponent {
-
-  @Output() usuarioChange = new EventEmitter<any>();
 forms = new FormGroup({
     Nome: new FormControl(''),
     Email: new FormControl(''),
@@ -20,5 +18,10 @@ forms = new FormGroup({
     Usuario: new FormControl(''),
     Biografia: new FormControl(''),
   });
+  salvar(){
+    const dados = this.forms.value;
+    localStorage.setItem('dadosUsuario',
+      JSON.stringify(dados));
+  }
 
 }

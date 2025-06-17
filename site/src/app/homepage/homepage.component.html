@@ -1,34 +1,40 @@
-@If(edit==false){
+@if(edit==false){
 <br>
-<label for="">Nome:</label>
+<label for="">Nome:{{dados.Nome}}</label>
+
 <br/>
-<label for="">Email:</label>
+<label for="">Email: {{dados.Email}}</label>
 <br>
-<label for="">Endereço:</label>
+<label for="">Endereço: {{dados.Endereco}}</label>
 <br/>
-<label for="">Telefone:</label>
+<label for="">Telefone: {{dados.Telefone}}</label>
+
 <br>
-<label for="">Usuario:</label>
+<label for="">Usuario: {{dados.Usuario}}</label>
+
 <br/>
-<label for="">Biografia:</label>
-}@Else{
+<label for="">Biografia: {{dados.Biografia}}</label>
+
+}@else{
 
 <br>
 <label for="">Nome:</label>
-<input></input>
+<input id="Senha" type="string"formControlName="Senha"/>
 <br/>
 <label for="">Email:</label>
-<input></input>
+<input id="Senha" type="string"formControlName="Senha"/>
 <br>
 <label for="">Endereço:</label>
-<input></input>
+<input id="Senha" type="string"formControlName="Senha"/>
 <br/>
 <label for="">Telefone:</label>
-<input></input>
+<input id="Senha" type="string"formControlName="Senha"/>
 <br>
 <label for="">Usuario:</label>
-<input></input>
+<input id="Senha" type="string"formControlName="Senha"/>
 <br/>
 <label for="">Biografia:</label>
-<input></input>
+<input id="Senha" type="string"formControlName="Senha"/>
 }
+<button (click)="editar()">editar</button>
+

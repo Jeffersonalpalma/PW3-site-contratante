@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
@@ -8,15 +8,13 @@ import { RouterModule } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent {
-  Usuario:string='sa';
-  Senha:string='123456';
-  Fords:FormGroup;
+export class LoginComponent 
+  implements OnInit{
+    dados:any;
+    ngOnInit() {
+      const dadosSalvos = localStorage.getItem('dadosUsuario');
+      this.dados = dadosSalvos ?
+      JSON.parse(dadosSalvos) : null;
 
-  constructor(private fb: FormBuilder) {
-    this.Fords = this.fb.group({
-      Usuario : this.fb.control(''),
-      Senha : this.fb.control('')
-  });
-}
+    }
 }

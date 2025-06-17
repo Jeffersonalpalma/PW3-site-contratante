@@ -1,35 +1,53 @@
 import { Component, OnInit, Output } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-homepage',
-  imports: [RouterModule],
+  imports: [RouterModule, ReactiveFormsModule],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.css'
 })
 export class HomepageComponent
 implements OnInit{
-dados:any;
+form!: FormGroup;
+dadosOriginais: any;
+edit:boolean=false;
 
   constructor(private fb: FormBuilder) {}
-  formss:FormGroup;
-  ngOnInit() {
-    this.formss = this.fb.group({
-      nome:[''],
-      email:['']
-    });
-    const dadosSalvos = localStorage.getItem('dadosUsuario');
-    if(dadosSalvos) {
-      this.formss.patchValue(JSON.parse(dadosSalvos));
-    }
 
+  ngOnInit() {
+    const dadosSalvos = localStorage.getItem('dadosUsuario');
+    this.dadosOriginais = dadosSalvos ? JSON.parse(dadosSalvos) : {};
+
+    this.form = this.fb.group({
+      Nome: [this.dadosOriginais.Nome],
+      Email: [this.dadosOriginais.Email],
+      Telefone: [this.dadosOriginais.Telefone],
+      Usuario: [this.dadosOriginais.Usuario],
+      Senha: [this.dadosOriginais.Senha],
+      Endereco: [this.dadosOriginais.Endereco],
+      Biografia: [this.dadosOriginais.Biografia],
+    });    
   }
-  edit:boolean=false;
+
+  salvar() {
+    
+    this.dadosOriginais = this.form.value;
+    localStorage.setItem('dadosUsuario', JSON.stringify(this.dadosOriginais));
+    
+    this.edit=!this.edit;
+    alert('Dados atualizados!');
+  }
+
+
 editar(){
   this.edit=!this.edit;
-  localStorage.setItem('dadosUsuario',
-    JSON.stringify(this.formss.value));
   }
+
 }
+
+
+
+
 

@@ -1,40 +1,53 @@
 @if(edit==false){
 <br>
-<label for="">Nome:{{dados.Nome}}</label>
-
-<br/>
-<label for="">Email: {{dados.Email}}</label>
+<label for="">Nome:{{dadosOriginais.Nome}}</label>
 <br>
-<label for="">Endereço: {{dados.Endereco}}</label>
-<br/>
-<label for="">Telefone: {{dados.Telefone}}</label>
-
+<label for="">Email: {{dadosOriginais.Email}}</label>
 <br>
-<label for="">Usuario: {{dados.Usuario}}</label>
+<label for="">Endereço: {{dadosOriginais.Endereco}}</label>
+<br>
+<label for="">Telefone: {{dadosOriginais.Telefone}}</label>
+<br>
+<label for="">Usuario: {{dadosOriginais.Usuario}}</label>
 
 <br/>
-<label for="">Biografia: {{dados.Biografia}}</label>
-
+<label for="">Biografia: {{dadosOriginais.Biografia}}</label>
+<br>
+<button (click)="editar()">editar</button>
 }@else{
 
-<br>
-<label for="">Nome:</label>
-<input id="Senha" type="string"formControlName="Senha"/>
-<br/>
-<label for="">Email:</label>
-<input id="Senha" type="string"formControlName="Senha"/>
-<br>
-<label for="">Endereço:</label>
-<input id="Senha" type="string"formControlName="Senha"/>
-<br/>
-<label for="">Telefone:</label>
-<input id="Senha" type="string"formControlName="Senha"/>
-<br>
-<label for="">Usuario:</label>
-<input id="Senha" type="string"formControlName="Senha"/>
-<br/>
-<label for="">Biografia:</label>
-<input id="Senha" type="string"formControlName="Senha"/>
+<form [formGroup]="form">
+  <label>Nome: 
+    <input formControlName="Nome" />
+  </label>
+  <br>
+  <label>Email:
+     <input formControlName="Email" />
+  </label>
+  <br>
+  <label>Telefone: 
+    <input formControlName="Telefone" />
+  </label>
+  <br>
+  <label>Usuário: 
+    <input formControlName="Usuario" />
+  </label>
+  <br>
+  <label>Senha: 
+    <input type="password" formControlName="Senha" />
+  </label>
+  <br>
+  <label>Endereço: 
+    <input formControlName="Endereco" />
+  </label>
+  <br>
+  <label>Biografia: 
+    <input formControlName="Biografia" />
+  </label>
+  <br>
+  <button (click)="salvar()">Salvar</button>
+</form>
 }
-<button (click)="editar()">editar</button>
+
+
 

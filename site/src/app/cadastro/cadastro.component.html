@@ -19,6 +19,9 @@
 <br/>
 <label for="Biografia">Biografia:</label>
 <input id="Biografia" type="string"formControlName="Biografia"/>
-<button (click)="salvar()" routerLink="/home"> Criar perfil</button>
+@if(erro==true){
+    <small>todos os campos devem ser preenchidos</small>
+}
+<button (click)="verificaSalva()" routerLink={{rout}}> Criar perfil</button>
 
 </form>

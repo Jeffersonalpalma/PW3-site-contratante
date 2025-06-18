@@ -1,4 +1,5 @@
 @if(edit==false){
+<div class="container">
 <br>
 <label for="">Nome:{{dadosOriginais.Nome}}</label>
 <br>
@@ -14,8 +15,9 @@
 <label for="">Biografia: {{dadosOriginais.Biografia}}</label>
 <br>
 <button (click)="editar()">editar</button>
+</div>
 }@else{
-
+<div class="container">
 <form [formGroup]="form">
   <label>Nome: 
     <input formControlName="Nome" />
@@ -47,7 +49,11 @@
   <br>
   <button (click)="salvar()">Salvar</button>
 </form>
+</div>
 }
+
+<a routerLink="/sobre">sobre o app</a>
+<a routerLink="/contato">nos contate</a>
 
 
 

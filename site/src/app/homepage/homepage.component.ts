@@ -35,9 +35,8 @@ edit:boolean=false;
     
     this.dadosOriginais = this.form.value;
     localStorage.setItem('dadosUsuario', JSON.stringify(this.dadosOriginais));
-    
-    this.edit=!this.edit;
     alert('Dados atualizados!');
+    this.edit=!this.edit;
   }
 
 

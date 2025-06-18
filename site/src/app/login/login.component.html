@@ -1,14 +1,17 @@
 <h1>Bem vindo</h1>
 
-<form>
+<form [formGroup]="form">
 <label for="Usuario">Usuario:</label>
 <input id="Usuario" type="string"formControlName="Usuario"/>
 <br>
 <label for="Senha">Senha:</label>
 <input id="Senha" type="password"formControlName="Senha"/>
+@if(erro==true){
+    <small>Usuario ou senha invalidos</small>
+}
 <br/>
 
-<button routerLink="/home"> Autenticar</button>
+<button (click)="verificar()" routerLink={{rout}}> Autenticar</button>
 <p>não tem uma conta?</p>
 <a routerLink="/cadastro">crie uma conta</a>
 </form>

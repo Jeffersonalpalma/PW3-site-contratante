@@ -9,6 +9,8 @@ import { RouterModule } from '@angular/router';
   styleUrl: './cadastro.component.css'
 })
 export class CadastroComponent {
+rout='/cadastro';
+erro:boolean=false;
 forms = new FormGroup({
     Nome: new FormControl(''),
     Email: new FormControl(''),
@@ -18,10 +20,26 @@ forms = new FormGroup({
     Usuario: new FormControl(''),
     Biografia: new FormControl(''),
   });
-  salvar(){
-    const dados = this.forms.value;
-    localStorage.setItem('dadosUsuario',
-      JSON.stringify(dados));
+  verificaSalva(){
+    const dados = this.forms.value;  
+    if(dados.Senha != '' &&
+      dados.Usuario != '' &&
+      dados.Email != '' &&
+      dados.Endereco != '' &&
+      dados.Telefone != '' &&
+      dados.Biografia != '' &&
+      dados.Nome != '' 
+
+     ){
+      localStorage.setItem('dadosUsuario',
+      JSON.stringify(dados)); 
+      this.rout="/home";
+    }
+    else{
+      this.erro=true;
+      this.rout='/cadastro';
+    }
+    
   }
 
 }

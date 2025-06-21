@@ -1,1 +1,28 @@
-<p>redes</p>
+<div class="container">
+    <h2>Fale conosco</h2>
+<form [formGroup]="formContato" (ngSubmit)="enviarMensagem()">
+  <label>Nome:
+    <input formControlName="nome" />
+  </label>
+  <br>
+  <label>Email:
+    <input formControlName="email" type="email" />
+  </label>
+  <br>
+  <label>Mensagem:
+    <textarea formControlName="mensagem"></textarea>
+  </label>
+  <br>
+  <button type="submit">Enviar</button>
+</form>
+<div class="icones">
+<a href="https://github.com/Jeffersonalpalma" target="_blank" rel="noopener noreferrer" title="GitHub">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="50" />
+</a>
+<a href="https://github.com/lary17181" target="_blank" rel="noopener noreferrer" title="GitHub">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="git" width="50" />
+</a>
+    </div>
+  </div>
+
+

@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: linear-gradient(145deg, #e8f0ff, #ffffff);
 }
 
 label {
@@ -22,11 +23,11 @@ input {
 }
 
 input:focus {
-  border-color: #007bff;
+  border-color: #75468f;
 }
 
 button {
-  background-color: #007bff;
+  background-color: #4f1270;
   color: white;
   font-size: 16px;
   padding: 12px;
@@ -37,7 +38,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #75468f;
 }
 
 h2 {
@@ -53,26 +54,4 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 15px;
-}
-
-.link-custom:hover {
-  color: #2575fc;
-  text-decoration: underline;
-  transform: scale(1.05);
-}
-
-.link-custom {
-  display: flex;
-  margin: 5px;
-  font-size: 14px;
-  text-decoration: none;
-  color: #6a11cb;
-  transition: all 0.3s ease;
-  font-weight: bold;
-}
-
-.link-container {
-  display: flex;
-  gap: 10px;
-  margin: 5px 0;
 }

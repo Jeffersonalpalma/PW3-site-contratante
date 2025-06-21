@@ -33,12 +33,11 @@ input {
 }
 
 input:focus {
-  border-color: #007bff;
+  border-color: #75468f;
 }
 
-/* Botão */
 button {
-  background-color: #007bff;
+  background-color: #4F1270;
   color: white;
   font-size: 16px;
   padding: 12px;
@@ -49,7 +48,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #75468f;
 }
 
 p {

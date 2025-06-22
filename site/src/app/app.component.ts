@@ -5,11 +5,11 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ContatoComponent } from './contato/contato.component';
 import { SobreComponent } from './sobre/sobre.component';
-import { HeatherComponent } from "./heather/heather.component";
+import { HeaderComponent } from "./header/header.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, LoginComponent, SobreComponent, CadastroComponent, HomepageComponent, HeatherComponent],
+  imports: [RouterOutlet, LoginComponent, SobreComponent, CadastroComponent, HomepageComponent, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
